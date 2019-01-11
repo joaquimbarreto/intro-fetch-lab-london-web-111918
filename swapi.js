@@ -27,7 +27,7 @@ function getDroids(id) {
   fetch(SWAPI_PEOPLE + id)
   .then(response => response.json())
   .then(data => {
-    droidEl.innerHTML = `<h3>Name: ${data.name}</h3><p>Height: ${data.height}</p><p>Mass: ${data.mass}</p>`
+    droidEl.innerHTML = `<h3>Name: ${data.name}</h3><p>Height: ${data.height}</p><p>Mass: ${data.mass}</p>`;
     const btn = document.createElement("input");
     btn.setAttribute("type", "button");
     btn.setAttribute("value", "Home Planet");
@@ -45,5 +45,7 @@ function getDroids(id) {
   });
 }
 
-document.addEventListener('load', getDroids(2));
-document.addEventListener('load', getDroids(3));
+getDroids(2);
+getDroids(3);
+
+document.addEventListener('DOMContentLoaded', undefined)
